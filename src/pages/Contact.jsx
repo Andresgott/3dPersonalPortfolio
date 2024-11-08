@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import profile from "../assets/images/profile.jpg";
 import linkedin from "../assets/images/linkedin.png";
-import x from "../assets/images/x.jpg";
+import x from "../assets/images/x.png";
 import facebook from "../assets/images/facebook.png";
-import mail from "../assets/images/mail.jpg";
+import mail from "../assets/images/mail.png";
 import github from "../assets/images/github.png";
 import insta from "../assets/images/insta.png";
 import goodreads from "../assets/images/goodreads.png";
@@ -60,7 +60,7 @@ const Contact = () => {
             width: isMobile ? "50%" : "20%",
             borderRadius: "50%",
             marginBottom: isMobile ? "1rem" : "0",
-            marginTop: "10%",
+            marginTop: "14%",
           }}
         />
 
@@ -80,25 +80,25 @@ const Contact = () => {
           alignItems: isMobile ? "center" : "flex-start",
         }}
       >
-        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/andres-gottlieb-377465226/" target="_blank" rel="noopener noreferrer">
           <img src={linkedin} alt="LinkedIn" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="https://twitter.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/andresgott10" target="_blank" rel="noopener noreferrer">
           <img src={x} alt="Twitter" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="https://facebook.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/andres.gottliebguzman/?locale=es_LA" target="_blank" rel="noopener noreferrer">
           <img src={facebook} alt="Facebook" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="mailto:tu-correo@example.com">
+        <a href="mailto:andres.gottlieb10@gmail.com">
           <img src={mail} alt="Mail" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Andresgott" target="_blank" rel="noopener noreferrer">
           <img src={github} alt="GitHub" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/andres_gott/" target="_blank" rel="noopener noreferrer">
           <img src={insta} alt="Instagram" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
-        <a href="https://www.goodreads.com/user/show/tu-usuario" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.goodreads.com/user/show/127973583-andres-gottlieb" target="_blank" rel="noopener noreferrer">
           <img src={goodreads} alt="Goodreads" style={{ width: "50px", height: "50px", objectFit: "contain" }} />
         </a>
       </div>

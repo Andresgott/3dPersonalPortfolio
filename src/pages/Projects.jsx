@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import bmwCOCHArunningLogo from "../assets/images/bmwCOCHArunninglogo.jpg";
 import portfolio from "../assets/images/portfolio.png";
-import angular from "../assets/images/angular.jpg";
+import angular from "../assets/images/angular.png";
 import css3 from "../assets/images/css3.png";
 import react from "../assets/images/React.png";
 import python from "../assets/images/python.png";
@@ -17,7 +17,18 @@ import c from "../assets/images/C.png";
 import kotlin from "../assets/images/kotlin.png";
 import selenium from "../assets/images/selenium.png";
 import rasa from "../assets/images/rasa.png";
+import chatbot from "../assets/images/chatbot.png";
+import docker from "../assets/images/docker.png";
+import git from "../assets/images/git.png";
+import linux from "../assets/images/linux.png";
 
+
+// Define las URLs de tus proyectos
+const projectLinks = [
+  "https://www.bmwcocharunning.com", // Enlace para bmwCOCHArunningLogo
+  "https://www.andresgott.com", // Enlace para portfolio
+  "https://www.andresgott.com" // Enlace para chatbot
+];
 
 const Projects = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -39,9 +50,9 @@ const Projects = () => {
     arrows: true,
     responsive: [
       {
-        breakpoint: 768, // Ancho de pantalla en píxeles
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Muestra solo un slide
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -72,28 +83,30 @@ const Projects = () => {
         }}
       >
         <Slider {...sliderSettings}>
-          {[bmwCOCHArunningLogo, portfolio, bmwCOCHArunningLogo, bmwCOCHArunningLogo].map((image, index) => (
+          {[bmwCOCHArunningLogo, portfolio, chatbot].map((image, index) => (
             <div key={index}>
-              <img
-                src={image}
-                alt={`Project ${index + 1}`}
-                onMouseEnter={() => setHovered(index)}
-                onMouseLeave={() => setHovered(null)}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  transition: "transform 0.3s",
-                  transform: hovered === index ? "scale(0.95)" : "scale(1)", // Reducción en hover
-                }}
-              />
+              <a href={projectLinks[index]} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={image}
+                  alt={`Project ${index + 1}`}
+                  onMouseEnter={() => setHovered(index)}
+                  onMouseLeave={() => setHovered(null)}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "transform 0.5s",
+                    transform: hovered === index ? "scale(0.95)" : "scale(1)",
+                  }}
+                />
+              </a>
             </div>
           ))}
         </Slider>
       </div>
-      
+
       {/* Sección de tecnologías */}
-      <h2 style={{ fontSize: "2rem", marginTop: "1%"}}>Known Technologies</h2>
+      <h2 style={{ fontSize: "2rem", marginTop: "1%" }}>Technologies I've Worked With</h2>
       <div
         style={{
           display: "flex",
@@ -103,13 +116,12 @@ const Projects = () => {
           marginTop: "1rem",
         }}
       >
-        {[angular, react, python, css3, sql, haskell, cSharp, typescript, threejs, c, kotlin, selenium, rasa].map((techImage, index) => (
+        {[angular, react, python, css3, sql, haskell, cSharp, typescript, threejs, c, kotlin, selenium, rasa, docker, git, linux].map((techImage, index) => (
           <img
             key={index}
             src={techImage}
             alt={`Technology ${index + 1}`}
-            style={{ width: "6%", height: "6%", objectFit: "contain", marginBottom: "3%" }}
-            
+            style={{ width: "5%", height: "5%", objectFit: "contain", marginBottom: "3%" }}
           />
         ))}
       </div>
